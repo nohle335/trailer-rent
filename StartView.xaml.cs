@@ -31,5 +31,12 @@ namespace Trailer_Rental
 
             mainwindow.MainContent.Content = new LeasingAgreementsView();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainwindow = (MainWindow)Application.Current.MainWindow;
+
+            mainwindow.MainContent.Content = new CustomerSearchView();
+        }
     }
 }

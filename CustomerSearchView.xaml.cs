@@ -15,14 +15,19 @@ using System.Windows.Shapes;
 
 namespace Trailer_Rental
 {
-    /// <summary>
-    /// Interaction logic for CustomerSearchView.xaml
-    /// </summary>
     public partial class CustomerSearchView : UserControl
     {
         public CustomerSearchView()
         {
             InitializeComponent();
         }
+
+        private void LeasingAgreementViewButtonBackToStartView_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainwindow = (MainWindow)Application.Current.MainWindow;
+
+            mainwindow.MainContent.Content = new StartView();
+        }
     }
 }
+
