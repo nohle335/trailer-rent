@@ -45,7 +45,183 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="LeasingAgreementViewButtonBackToStartView" Content="Back to Start View" Click="LeasingAgreementViewButtonBackToStartView_Click" Grid.Column="0" Grid.Row="1" Background="#F66C09"/>
+        <Button x:Name="LeasingAgreementViewButtonBackToStartView"
+            Content="←"
+            Click="LeasingAgreementViewButtonBackToStartView_Click"
+            Grid.Row="1"
+            Grid.Column="0"
+            Width="50"
+            Height="50"
+            FontSize="30"
+            FontWeight="Bold"
+            Background="#F66C09"
+            Foreground="White"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Margin="10,0,0,0"/>
 
+        <!-- ====================================== -->
+        <!-- RECHTES EINGABEFENSTER                  -->
+        <!-- ====================================== -->
+
+        <Border Grid.Column="1"
+                Grid.Row="1"
+                Margin="37,5,37,5"
+                Padding="15"
+                Background="#FFF5EE"
+                BorderBrush="#F66C09"
+                BorderThickness="2"
+                CornerRadius="12">
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+
+                <StackPanel>
+
+                    <TextBlock Text="Leasing Agreement"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Foreground="#F66C09"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,20"/>
+
+
+                    <!-- Kunde -->
+                    <TextBlock Text="Kunde"
+                               FontWeight="Bold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="CustomerTextBox"
+                             Height="30"
+                             Margin="0,0,0,12"
+                             Padding="5"/>
+
+
+                    <!-- Trailer -->
+                    <TextBlock Text="Trailer"
+                               FontWeight="Bold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="TrailerTextBox"
+                             Height="30"
+                             Margin="0,0,0,12"
+                             Padding="5"/>
+
+
+                    <!-- Mietbeginn -->
+                    <TextBlock Text="Mietbeginn"
+                               FontWeight="Bold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="StartDateTextBox"
+                             Height="30"
+                             Margin="0,0,0,12"
+                             Padding="5"/>
+
+
+                    <!-- Mietende -->
+                    <TextBlock Text="Mietende"
+                               FontWeight="Bold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="EndDateTextBox"
+                             Height="30"
+                             Margin="0,0,0,12"
+                             Padding="5"/>
+
+
+                    <!-- Preis -->
+                    <TextBlock Text="Preis"
+                               FontWeight="Bold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="PriceTextBox"
+                             Height="30"
+                             Margin="0,0,0,12"
+                             Padding="5"/>
+
+
+                    <!-- Bemerkungen -->
+                    <TextBlock Text="Bemerkungen"
+                               FontWeight="Bold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="NotesTextBox"
+                             Height="80"
+                             Margin="0,0,0,15"
+                             Padding="5"
+                             TextWrapping="Wrap"
+                             AcceptsReturn="True"
+                             VerticalScrollBarVisibility="Auto"/>
+
+
+                    <!-- Kaution -->
+                     <TextBlock Text="Kaution"
+                       FontWeight="Bold"
+                       Margin="0,0,0,5"/>
+
+                     <TextBox x:Name="DepositTextBox"
+                     Height="30"
+                     Margin="0,0,0,12"
+                     Padding="5"/>
+
+
+                                <!-- Gesamtpreis -->
+                     <TextBlock Text="Gesamtpreis"
+                       FontWeight="Bold"
+                       Margin="0,0,0,5"/>
+
+                     <TextBox x:Name="TotalPriceTextBox"
+                     Height="30"
+                     Margin="0,0,0,12"
+                     Padding="5"/>
+
+
+                                <!-- Zahlungsmethode -->
+                     <TextBlock Text="Zahlungsmethode"
+                       FontWeight="Bold"
+                       Margin="0,0,0,15"/>
+
+                     <TextBox x:Name="PaymentMethodTextBox"
+                     Height="30"
+                     Margin="0,0,0,15"
+                     Padding="5"/>
+                    
+                    <!-- Speichern -->
+                    <Button Content="Leasing Agreement speichern"
+                        Height="35"
+                        Background="#F66C09"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Click="SaveDocumentButton_Click"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Content="Print Leasing Agreement"
+                            Grid.Column="0"
+                            Height="35"
+                            Background="#F66C09"
+                            Foreground="White"
+                            Click="PrinDocumentButton_Click"
+                            Margin="0,0,2,0"/>
+
+                        <Button Content="Print Empty Leasing Agreement"
+                            Grid.Column="1"
+                            Height="35"
+                            Background="#F66C09"
+                            Foreground="White"
+                            Click="PrintEmptyDocumentButton_Click"
+                            Margin="2,0,0,0"/>
+
+                    </Grid>
+
+                </StackPanel>
+
+            </ScrollViewer>
+
+        </Border>
     </Grid>
 </UserControl>

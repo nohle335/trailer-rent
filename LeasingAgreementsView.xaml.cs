@@ -31,5 +31,32 @@ namespace Trailer_Rental
 
             mainwindow.MainContent.Content = new StartView();
         }
+
+        private void SaveDocumentButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(
+                "Document is being saved",
+                "Document saved!",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+        }
+
+        private void PrinDocumentButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(
+                "Document is being printed",
+                "Document printed",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+        }
+
+        private void PrintEmptyDocumentButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(
+                "Empty document is being printed",
+                "Document printed!",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+        }
     }
 }
